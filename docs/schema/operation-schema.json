@@ -1,0 +1,24 @@
+{
+  "id": 1,  
+  "userId": 1,
+  "reportName": "report_name",
+  "iterations": [
+    {
+      "startDate": "2022-9-12",
+      "endDate": "2022-10-13",
+      "tickers": [
+        {
+          "017250": "인터엠",
+          "070300": "엑스큐어",
+          "070590": "한솔인티큐브",
+          "134060": "이퓨쳐",
+          "001770": "SHD"
+        }
+      ]
+    }
+  ],
+  "optionFee": 0,
+  "opsIterationsIdx": 0,
+  "opsLastUpdateAt": "",
+  "opsVersion": ""
+}

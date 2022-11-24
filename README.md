@@ -5,9 +5,13 @@
 
 # action item - server
 
-- [ ] config
+- [x] config  
+- [ ] config  
 
 # action item - client
 
 # action item - reporting
+
+- [ ] config  
+
 
