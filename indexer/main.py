@@ -27,6 +27,7 @@ CONST = dict({
     "getOHLCV_lastUpdateAt": 'getOHLCV_lastUpdateAt',
     "getOHLCV_lastUpdateCount": 'getOHLCV_lastUpdateCount',
     "getOHLCV_isUpdating": 'getOHLCV_isUpdating',
+    "ticker_lastUpdateAt": 'ticker_lastUpdateAt'
 })
 
 # redis connection
@@ -66,21 +67,25 @@ def isBeforeOrSame(dateStr1, dateStr2):
 # getOHLCV
 
 
-def getOHLCV_cachingAllPeriod(code):
+def cachingOHLCV(code):
     cacheKey_allPeriod = f"ticker_{code}"
 
     if (isCacheConnected):
-        cached = cache.get(cacheKey_allPeriod)
-        lastUpdateAt = cache.get('getOHLCV_lastUpdateAt').decode('utf-8')
+        lastUpdateAt = cache.hget(CONST["ticker_lastUpdateAt"], code)
+        lastUpdateAt = lastUpdateAt.decode('utf-8') if lastUpdateAt else None
+
         todayDate = getDateTimeStr()[0]
 
-        if (cached and lastUpdateAt and isBeforeOrSame(todayDate, lastUpdateAt)):
-            df = pd.read_json(BytesIO(cached))
-            return df
+        if (lastUpdateAt and isBeforeOrSame(todayDate, lastUpdateAt)):
+            print(f"[info] {code} skip caching ")
+            return
         else:
             df = fdr.DataReader(code, "1900", todayDate)
             cache.set(cacheKey_allPeriod, df.to_json())
-            return df
+            cache.hset(CONST["ticker_lastUpdateAt"], code, todayDate)
+            print(f"[info] {code} ticker_lastUpdateAt {todayDate}")
+            time.sleep(0.2)
+            return
 
 
 # main.py
@@ -97,20 +102,21 @@ print(f"[info] finalEndDate {finalEndDate}")
 cache.set(CONST["getOHLCV_lastUpdateAt"], finalEndDate)
 cache.set(CONST["getOHLCV_isUpdating"], 1)
 
-for code in codeList:
+for code in codeList[:10]:
     try:
-        getOHLCV_cachingAllPeriod(code)
+        cachingOHLCV(code)
         successCount += 1
         time_i = time.time()
         print(
             f"[success] ticker price batch job - {code}"+f" [{time_i - time_s:.5f} sec]")
-        time.sleep(0.2)
+        
 
     except Exception as err:
-        print("getOHLCV Exception")
+        print("[Error] cachingOHLCV Exception")
         print(err)
 
-print(f"[end] ticker price batch job - {successCount} / {len(codeList)}")
+print(
+    f"[end] ticker price batch job - successCount : {successCount} / {len(codeList)}")
 cache.set(CONST["getOHLCV_lastUpdateCount"], successCount)
 cache.set(CONST["getOHLCV_isUpdating"], 0)
 

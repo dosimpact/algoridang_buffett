@@ -10,8 +10,9 @@
     "pip:freeze": "pip freeze > requirements.txt",
     "pip:install": "pip install -r ./requirements.txt",
     "dev:start": "python main.py",
-    "docker:build": "docker build -t ehdudtkatka/indexer:0.2 .",
-    "docker:run": "docker run -it --rm --name indexer ehdudtkatka/indexer:0.2"
+    "docker:build": "docker build -t ehdudtkatka/indexer:0.4 .",
+    "docker:run": "docker run -it --rm --name indexer ehdudtkatka/indexer:0.4",
+    "docker:push": "docker push ehdudtkatka/indexer:0.4"
   },
   "keywords": [],
   "author": "",
