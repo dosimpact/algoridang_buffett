@@ -44,6 +44,7 @@ try:
 except Exception as err:
     print("REDIS Exception")
     print(err)
+    exit(0)
 
 
 # utils
