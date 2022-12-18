@@ -102,14 +102,13 @@ print(f"[info] finalEndDate {finalEndDate}")
 cache.set(CONST["getOHLCV_lastUpdateAt"], finalEndDate)
 cache.set(CONST["getOHLCV_isUpdating"], 1)
 
-for code in codeList[:10]:
+for code in codeList:
     try:
         cachingOHLCV(code)
         successCount += 1
         time_i = time.time()
         print(
             f"[success] ticker price batch job - {code}"+f" [{time_i - time_s:.5f} sec]")
-        
 
     except Exception as err:
         print("[Error] cachingOHLCV Exception")
