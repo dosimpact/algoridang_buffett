@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import * as Joi from 'joi';
 import { ENV_FILE, NODE_ENV } from './common/constant/env';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { User } from 'src/user/user.entity';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       }),
       synchronize: process.env.NODE_ENV === NODE_ENV.prod ? false : true,
       logging: true,
+      entities: [User],
     }),
   ],
   controllers: [AppController],

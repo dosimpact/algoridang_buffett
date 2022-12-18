@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-11-24-real-1-ROE증가율",
+    "iterations": [
+      {
+        "startDate": "2022-11-24",
+        "endDate": null,
+        "tickers": {
+          "043360": "디지아이",
+          "054410": "케이피티유",
+          "115610": "이미지스",
+          "900270": "헝셩그룹",
+          "099410": "동방선기"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-11-24-real-2-GPA+증가율+GPM+증가율",
+    "iterations": [
+      {
+        "startDate": "2022-11-24",
+        "endDate": null,
+        "tickers": {
+          "064090": "에프앤리퍼블릭",
+          "070590": "한솔인티큐브",
+          "215480": "토박스코리아",
+          "028080": "휴맥스홀딩스",
+          "115610": "이미지스"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-11-24-real-3-분기NPM",
+    "iterations": [
+      {
+        "startDate": "2022-11-24",
+        "endDate": null,
+        "tickers": {
+          "224060": "더코디",
+          "134060": "이퓨쳐",
+          "096870": "엘디티",
+          "054410": "케이피티유",
+          "070300": "엑스큐어"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-11-24-real-4-분기PEG",
+    "iterations": [
+      {
+        "startDate": "2022-11-24",
+        "endDate": null,
+        "tickers": {
+          "224060": "더코디",
+          "033250": "체시스",
+          "123330": "제닉",
+          "019540": "일지테크",
+          "106240": "파인테크닉스"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-11-30-퀀트4대-마법공식",
+    "iterations": [
+      {
+        "startDate": "2022-11-24",
+        "endDate": null,
+        "tickers": {
+          "010100": "한국프랜지",
+          "332370": "아이디피",
+          "111110": "호전실업",
+          "036670": "KCI",
+          "155660": "DSR",
+          "078350": "한양디지텍",
+          "010690": "화신",
+          "272110": "케이엔제이",
+          "109080": "옵티시스",
+          "061040": "알에프텍",
+          "083450": "GST",
+          "049430": "코메론",
+          "130500": "GH신소재",
+          "214180": "헥토이노베이션",
+          "123700": "SJM",
+          "065510": "휴비츠",
+          "230240": "에치에프알",
+          "000990": "DB하이텍",
+          "195870": "해성디에스",
+          "060720": "KH바텍"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-11-30-퀀트4대-저밸류",
+    "iterations": [
+      {
+        "startDate": "2022-11-24",
+        "endDate": null,
+        "tickers": {
+          "040610": "SG&G",
+          "010100": "한국프랜지",
+          "123700": "SJM",
+          "101330": "모베이스",
+          "025530": "SJM홀딩스",
+          "054940": "엑사이엔씨",
+          "114630": "폴라리스우노",
+          "053060": "세동",
+          "115570": "스타플렉스",
+          "009310": "참엔지니어링",
+          "054040": "한국컴퓨터",
+          "006200": "한국전자홀딩스",
+          "111110": "호전실업",
+          "033050": "제이엠아이",
+          "155660": "DSR",
+          "081580": "성우전자",
+          "052900": "KX하이텍",
+          "058860": "KTIS",
+          "025880": "케이씨피드",
+          "012860": "모베이스전자"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-11-30-퀀트4대-고속성장",
+    "iterations": [
+      {
+        "startDate": "2022-11-24",
+        "endDate": null,
+        "tickers": {
+          "350520": "이지스레지던스리츠",
+          "009200": "무림페이퍼",
+          "123700": "SJM",
+          "009580": "무림PP",
+          "025530": "SJM홀딩스",
+          "010100": "한국프랜지",
+          "061040": "알에프텍",
+          "111110": "호전실업",
+          "033100": "제룡전기",
+          "099440": "스맥",
+          "332370": "아이디피",
+          "079370": "제우스",
+          "155660": "DSR",
+          "142210": "유니트론텍",
+          "115480": "씨유메디칼",
+          "049430": "코메론",
+          "042370": "비츠로테크",
+          "001540": "안국약품",
+          "128540": "에코캡",
+          "083310": "엘오티베큠"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-11-30-퀀트4대-슈퍼퀀트",
+    "iterations": [
+      {
+        "startDate": "2022-11-24",
+        "endDate": null,
+        "tickers": {
+          "350520": "이지스레지던스리츠",
+          "010100": "한국프랜지",
+          "123700": "SJM",
+          "111110": "호전실업",
+          "025530": "SJM홀딩스",
+          "009580": "무림PP",
+          "061040": "알에프텍",
+          "155660": "DSR",
+          "049430": "코메론",
+          "078150": "HB테크놀러지",
+          "142210": "유니트론텍",
+          "332370": "아이디피",
+          "036710": "심텍홀딩스",
+          "007860": "서연",
+          "025560": "미래산업",
+          "054040": "한국컴퓨터",
+          "052330": "코텍",
+          "010690": "화신",
+          "009970": "영원무역홀딩스",
+          "163560": "동일고무벨트"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  }
+]

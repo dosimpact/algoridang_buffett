@@ -1,11 +1,11 @@
 {
   "id": 1,
   "userId": 1,
-  "reportName": "report_name",
+  "reportName": "forward-1-GPA전략",
   "iterations": [
     {
       "startDate": "2022-9-12",
-      "endDate": "2022-10-13",
+      "endDate": null,
       "tickers": {
         "017250": "인터엠",
         "070300": "엑스큐어",
@@ -21,6 +21,5 @@
   "opsVersion": "",
   "rebalancing": "PORT_CHANGE",
   "buyStrategy": "",
-  "sellStrategy": "",
-  "reportBenchmarkTicker": "KQ11"
+  "sellStrategy": ""
 }

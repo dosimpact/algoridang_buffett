@@ -1,0 +1,277 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-1-GPA",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "017250": "인터엠",
+          "070300": "엑스큐어",
+          "070590": "한솔인티큐브",
+          "134060": "이퓨쳐",
+          "001770": "SHD"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-2-ROE-R+Q-PEG",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "204210": "모두투어리츠",
+          "043360": "디지아이",
+          "070300": "엑스큐어",
+          "054410": "케이피티유",
+          "900270": "헝셩그룹"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-3-GPA+GPA-R+GPM+GPM-R+Q-PEG+ROE-R",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "098660": "에스티오",
+          "070300": "엑스큐어",
+          "115610": "이미지스",
+          "900270": "헝셩그룹",
+          "134060": "이퓨쳐"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-4-Q-NPM",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "070300": "엑스큐어",
+          "096870": "엘디티",
+          "134060": "이퓨쳐",
+          "204210": "모두투어리츠",
+          "054410": "케이피티유"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-4-1-Q-NPM+Q-PEG",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "204210": "모두투어리츠",
+          "134060": "이퓨쳐",
+          "079190": "케스피온",
+          "070300": "엑스큐어",
+          "009140": "경인전자"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-5-Q-EPS증가율QOQ",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "020400": "대동금속",
+          "070300": "엑스큐어",
+          "026910": "광진실업",
+          "204210": "모두투어리츠",
+          "039740": "한국정보공학"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-5-1-Q-EPS증가율QOQ+Q-PEG",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "204210": "모두투어리츠",
+          "900070": "글로벌에스엠",
+          "098660": "에스티오",
+          "070300": "엑스큐어",
+          "079190": "케스피온"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-6-Q-GPM",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "070300": "엑스큐어",
+          "140910": "에이리츠",
+          "134060": "이퓨쳐",
+          "204210": "모두투어리츠",
+          "058450": "일야"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-6-1-Q-GPM+Q-PEG",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "204210": "모두투어리츠",
+          "134060": "이퓨쳐",
+          "098660": "에스티오",
+          "070300": "엑스큐어",
+          "028080": "휴맥스홀딩스"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-6-2-Q-GPM+Q-EPS+EPS-QOQ",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "204210": "모두투어리츠",
+          "098660": "에스티오",
+          "070300": "엑스큐어",
+          "317530": "캐리소프트",
+          "028080": "휴맥스홀딩스"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-9-12-forward-7-Q-PEG",
+    "iterations": [
+      {
+        "startDate": "2022-9-12",
+        "endDate": null,
+        "tickers": {
+          "204210": "모두투어리츠",
+          "134060": "이퓨쳐",
+          "079190": "케스피온",
+          "098660": "에스티오",
+          "010420": "한솔PNS"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "name": "indexer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "virtual:create": "virtualenv pip_env --python=3.9",
+    "virtual:activate": "source pip_env/bin/activate",
+    "virtual:deactivate": "deactivate",
+    "dev:start": "python main.py",
+    "docker:build": "docker build -t ehdudtkatka/indexer:0.2 .",
+    "docker:run": "docker run -it --rm --name indexer ehdudtkatka/indexer:0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

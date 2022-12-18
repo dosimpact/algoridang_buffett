@@ -1,0 +1,4 @@
+FROM python:3.10.8
+
+# RUN 
+CMD ["echo","hello world"]

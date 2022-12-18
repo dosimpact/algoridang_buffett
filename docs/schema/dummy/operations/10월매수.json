@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-10-24-real-1-ROE증가율",
+    "iterations": [
+      {
+        "startDate": "2022-10-24",
+        "endDate": null,
+        "tickers": {
+          "039740": "한국정보공학",
+          "043360": "디지아이",
+          "054410": "케이피티유",
+          "088790": "진도",
+          "070300": "엑스큐어"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-10-24-real-2-GPA+증가율+GPM+증가율",
+    "iterations": [
+      {
+        "startDate": "2022-10-24",
+        "endDate": null,
+        "tickers": {
+          "070590": "한솔인티큐브",
+          "026040": "제이에스티나",
+          "115610": "이미지스",
+          "032580": "피델릭스",
+          "028080": "휴맥스홀딩스"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-10-24-real-3-분기NPM",
+    "iterations": [
+      {
+        "startDate": "2022-10-24",
+        "endDate": null,
+        "tickers": {
+          "134060": "이퓨쳐",
+          "070300": "엑스큐어",
+          "096870": "엘디티",
+          "204210": "모두투어리츠",
+          "054410": "케이피티유"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  },
+  {
+    "id": 1,
+    "userId": 1,
+    "reportName": "22-10-24-real-4-분기PEG",
+    "iterations": [
+      {
+        "startDate": "2022-10-24",
+        "endDate": null,
+        "tickers": {
+          "134060": "이퓨쳐",
+          "204210": "모두투어리츠",
+          "192390": "윈하이텍",
+          "010420": "한솔PNS",
+          "900270": "헝셩그룹"
+        }
+      }
+    ],
+    "opsTradingFee": 0,
+    "opsIterationsIdx": 0,
+    "opsLastUpdateAt": "",
+    "opsVersion": "",
+    "rebalancing": "PORT_CHANGE",
+    "buyStrategy": "",
+    "sellStrategy": ""
+  }
+]
