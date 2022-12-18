@@ -7,6 +7,8 @@
     "virtual:create": "virtualenv pip_env --python=3.9",
     "virtual:activate": "source pip_env/bin/activate",
     "virtual:deactivate": "deactivate",
+    "pip:freeze": "pip freeze > requirements.txt",
+    "pip:install": "pip install -r ./requirements.txt",
     "dev:start": "python main.py",
     "docker:build": "docker build -t ehdudtkatka/indexer:0.2 .",
     "docker:run": "docker run -it --rm --name indexer ehdudtkatka/indexer:0.2"
