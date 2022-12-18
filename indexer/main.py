@@ -12,8 +12,6 @@ from dotenv import load_dotenv
 
 load_dotenv(verbose=True)
 
-print(os.getenv('benchmark'))
-
 # .env
 env = dict({
     # fdr : KS11 , yfinance : ^KS11 ,   # 코스피 KS11, 코스닥 KQ11
@@ -24,11 +22,14 @@ env = dict({
     "redis_OHLCV_TTL": os.getenv('redis_OHLCV_TTL'),  # 5days
 })
 
+# constant
 CONST = dict({
     "getOHLCV_lastUpdateAt": 'getOHLCV_lastUpdateAt',
-    "getOHLCV_lastUpdateCount": 'getOHLCV_lastUpdateCount'
+    "getOHLCV_lastUpdateCount": 'getOHLCV_lastUpdateCount',
+    "getOHLCV_isUpdating": 'getOHLCV_isUpdating',
 })
 
+# redis connection
 cache = redis.Redis(
     host=env["redis_host"],
     port=env["redis_port"],
@@ -73,6 +74,7 @@ def getOHLCV(code, start, end=None):
         return fdr.DataReader(code, start, finalEndDate)
 
 
+# main.py
 time_s = time.time()
 
 df_krx = fdr.StockListing('KRX')
@@ -81,9 +83,9 @@ successCount = 0
 finalEndDate = getDateTimeStr()[0]
 
 print(f"[start] ticker price batch job - {len(codeList)}")
-
 print(f"[info] finalEndDate {finalEndDate}")
 cache.set(CONST["getOHLCV_lastUpdateAt"], finalEndDate)
+cache.set(CONST["getOHLCV_isUpdating"], 1)
 
 for code in codeList:
     try:
@@ -98,9 +100,9 @@ for code in codeList:
         print("getOHLCV Exception")
         print(err)
 
-
-time_e = time.time()
 print(f"[end] ticker price batch job - {successCount} / {len(codeList)}")
 cache.set(CONST["getOHLCV_lastUpdateCount"], successCount)
+cache.set(CONST["getOHLCV_isUpdating"], 0)
 
+time_e = time.time()
 print(f"complated : {time_e - time_s:.5f} sec")
