@@ -49,7 +49,7 @@ except Exception as err:
 # utils
 def getDateTimeStr(hours=9):
     dt = datetime.datetime.now(datetime.timezone.utc)  # UTC 현재 시간
-    now = dt.now() + datetime.timedelta(hours=hours)  # UTC -> UTC+9
+    now = dt + datetime.timedelta(hours=hours)  # UTC -> UTC+9
 
     TODAY_DATE = now.strftime('%Y-%m-%d')
     TODAY_TIME = now.strftime('%H-%M-%S')
@@ -57,21 +57,29 @@ def getDateTimeStr(hours=9):
     return TODAY_DATE, TODAY_TIME
 
 
-def getOHLCV(code, start, end=None):
-    finalEndDate = end if end else getDateTimeStr()[0]
-    cacheKey = f"ticker_{code}"
+def isBeforeOrSame(dateStr1, dateStr2):
+    datetime1 = datetime.datetime.strptime(dateStr1, '%Y-%m-%d')
+    datetime2 = datetime.datetime.strptime(dateStr2, '%Y-%m-%d')
+    return datetime1 <= datetime2
+
+# getOHLCV
+
+
+def getOHLCV_cachingAllPeriod(code):
+    cacheKey_allPeriod = f"ticker_{code}"
 
     if (isCacheConnected):
-        cached = cache.get(cacheKey)
-        if (cached):
-            return pd.read_json(BytesIO(cached))
+        cached = cache.get(cacheKey_allPeriod)
+        lastUpdateAt = cache.get('getOHLCV_lastUpdateAt').decode('utf-8')
+        todayDate = getDateTimeStr()[0]
 
-        else:
-            df = fdr.DataReader(code, start, finalEndDate)
-            cache.setex(cacheKey, env['redis_OHLCV_TTL'], df.to_json())
+        if (cached and lastUpdateAt and isBeforeOrSame(todayDate, lastUpdateAt)):
+            df = pd.read_json(BytesIO(cached))
             return df
-    else:
-        return fdr.DataReader(code, start, finalEndDate)
+        else:
+            df = fdr.DataReader(code, "1900", todayDate)
+            cache.set(cacheKey_allPeriod, df.to_json())
+            return df
 
 
 # main.py
@@ -84,12 +92,13 @@ finalEndDate = getDateTimeStr()[0]
 
 print(f"[start] ticker price batch job - {len(codeList)}")
 print(f"[info] finalEndDate {finalEndDate}")
+
 cache.set(CONST["getOHLCV_lastUpdateAt"], finalEndDate)
 cache.set(CONST["getOHLCV_isUpdating"], 1)
 
 for code in codeList:
     try:
-        getOHLCV(code, '1900', finalEndDate)
+        getOHLCV_cachingAllPeriod(code)
         successCount += 1
         time_i = time.time()
         print(
