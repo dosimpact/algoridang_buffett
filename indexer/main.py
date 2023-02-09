@@ -81,10 +81,13 @@ def cachingOHLCV(code):
             return
         else:
             df = fdr.DataReader(code, "1900", todayDate)
+            lastIndexDate = df.index[-1].strftime('%Y-%m-%d')
+
             cache.set(cacheKey_allPeriod, df.to_json())
-            cache.hset(CONST["ticker_lastUpdateAt"], code, todayDate)
-            print(f"[info] {code} ticker_lastUpdateAt {todayDate}")
-            time.sleep(0.2)
+            cache.hset(CONST["ticker_lastUpdateAt"], code, lastIndexDate)
+
+            print(f"[info] {code} ticker_lastUpdateAt {lastIndexDate}")
+            time.sleep(0.1)
             return
 
 
