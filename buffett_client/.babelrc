@@ -1,4 +1,0 @@
-{
-  "presets": ["next/babel"], // 기존의 next/babel 프리셋, styled-jsx 등 설정
-  "plugins": ["@emotion"] // emotion 바벨 설정
-}
