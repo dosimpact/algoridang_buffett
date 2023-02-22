@@ -70,41 +70,48 @@ def isBeforeOrSame(dateStr1, dateStr2):
 def cachingOHLCV(code):
     cacheKey_allPeriod = f"ticker_{code}"
 
+    # ticker별 lastUpdate는 해시맵으로 관리한다.
     if (isCacheConnected):
         lastUpdateAt = cache.hget(CONST["ticker_lastUpdateAt"], code)
         lastUpdateAt = lastUpdateAt.decode('utf-8') if lastUpdateAt else None
 
         todayDate = getDateTimeStr()[0]
 
+        # case fresh data ( already cached )
         if (lastUpdateAt and isBeforeOrSame(todayDate, lastUpdateAt)):
             print(f"[info] {code} skip caching ")
             return
-        else:
+        else:  # case : stale or no cached
             df = fdr.DataReader(code, "1900", todayDate)
+
             lastIndexDate = df.index[-1].strftime('%Y-%m-%d')
 
+            # update ohlcv data and meta data
             cache.set(cacheKey_allPeriod, df.to_json())
             cache.hset(CONST["ticker_lastUpdateAt"], code, lastIndexDate)
 
             print(f"[info] {code} ticker_lastUpdateAt {lastIndexDate}")
+
             time.sleep(0.1)
             return
 
 
 # main.py
 time_s = time.time()
+# ----- start batch
 
 df_krx = fdr.StockListing('KRX')
 codeList = list(df_krx['Code'])
+
 successCount = 0
 finalEndDate = getDateTimeStr()[0]
 
 print(f"[start] ticker price batch job - {len(codeList)}")
 print(f"[info] finalEndDate {finalEndDate}")
-
 cache.set(CONST["getOHLCV_lastUpdateAt"], finalEndDate)
 cache.set(CONST["getOHLCV_isUpdating"], 1)
 
+# - iterate all of tickers
 for code in codeList:
     try:
         cachingOHLCV(code)
@@ -122,5 +129,7 @@ print(
 cache.set(CONST["getOHLCV_lastUpdateCount"], successCount)
 cache.set(CONST["getOHLCV_isUpdating"], 0)
 
+
+# ----- end batch
 time_e = time.time()
 print(f"complated : {time_e - time_s:.5f} sec")
