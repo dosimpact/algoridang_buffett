@@ -2,6 +2,7 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  Index,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
   VersionColumn,
@@ -12,14 +13,14 @@ export class CoreEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @UpdateDateColumn({ type: 'timestamptz' })
-  updateAt: Date;
+  @CreateDateColumn()
+  createdAt: Date;
 
-  @CreateDateColumn({ type: 'timestamptz' })
-  createAt: Date;
+  @UpdateDateColumn()
+  updatedAt: Date;
 
-  @DeleteDateColumn({ type: 'timestamptz' })
-  deleteAt: Date;
+  @DeleteDateColumn()
+  deletedAt: Date;
 
   @VersionColumn()
   version: number;

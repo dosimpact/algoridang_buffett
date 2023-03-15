@@ -25,8 +25,8 @@ import { User } from 'src/user/user.entity';
       }),
     }),
     TypeOrmModule.forRoot({
-      type: 'postgres',
-      url: process.env.DATABASE_URL,
+      type: 'mysql',
+      url: process.env.BUFFETT_DATABASE_URL,
       ...(process.env.DATABASE_rejectUnauthorized === 'false' && {
         ssl: {
           rejectUnauthorized: false,
